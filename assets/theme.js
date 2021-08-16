@@ -6269,8 +6269,8 @@ theme.Zoom = (function() {
         .then(
           function(image) {
             this.cache.targetImage = image;
-            image.style.width = image.width + 'px';
-            image.style.height = image.height + 'px';
+            image.style.width = image.width * 1.5 + 'px';
+            image.style.height = image.height * 1.5 + 'px';
             image.style.position = 'absolute';
             image.style.maxWidth = 'none';
             image.style.maxHeight = 'none';
