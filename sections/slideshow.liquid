@@ -111,22 +111,22 @@
       </div>
       <div class="slideshow__controls">
         {%- if section.blocks.size > 1 -%}
-          {%- assign arrows_width = section.blocks.size | times: 18 | plus: 115 -%}
+          {%- assign arrows_width = section.blocks.size | times: 18 | plus: 30 -%}
           <div class="slideshow__arrows"
                style="width: {{- arrows_width -}}px">
-            <button class="slideshow__arrow slideshow__arrow-previous" aria-label="{{ 'sections.slideshow.previous_slide' | t }}" data-slider-button>{% include 'icon-chevron-left' %}</button>
-            <button class="slideshow__arrow slideshow__arrow-next" aria-label="{{ 'sections.slideshow.next_slide' | t }}" data-slider-button data-slider-button-next>{% include 'icon-chevron-right' %}</button>
+            {% comment %} <button class="slideshow__arrow slideshow__arrow-previous" aria-label="{{ 'sections.slideshow.previous_slide' | t }}" data-slider-button>{% include 'icon-chevron-left' %}</button> {% endcomment %}
+            {% comment %} <button class="slideshow__arrow slideshow__arrow-next" aria-label="{{ 'sections.slideshow.next_slide' | t }}" data-slider-button data-slider-button-next>{% include 'icon-chevron-right' %}</button> {% endcomment %}
 
             <ul class="slick-dots" data-slider-indicators>
               {%- for block in section.blocks -%}
-                <li{% if forloop.first %} class="slick-active"{% endif %} data-slider-indicator>
+                <li {% if forloop.first %} class="slick-active"{% endif %} data-slider-indicator>
                   <a href="#Slideshow-{{ section.id }}" aria-label="{{ 'sections.slideshow.load_slide' | t: slide_number: forloop.index }}" data-slide-number="{{ forloop.index0 }}" aria-controls="slickSlide-{{ block.id }}"></a>
                 </li>
               {%- endfor -%}
             </ul>
           </div>
 
-          {%- if section.settings.autorotate -%}
+          {% comment %} {%- if section.settings.autorotate -%}
             <button type="button" class="slideshow__pause" data-id="{{ section.id }}" aria-live="polite" aria-pressed="false" data-slider-pause>
               <span class="slideshow__pause-stop">
                 {% include 'icon-pause' %}
@@ -137,7 +137,7 @@
                 <span class="icon__fallback-text">{{ 'sections.slideshow.rotate_slideshow' | t }}</span>
               </span>
             </button>
-          {%- endif -%}
+          {%- endif -%} {% endcomment %}
         {%- endif -%}
       </div>
     </div>

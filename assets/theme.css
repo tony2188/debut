@@ -5132,7 +5132,7 @@ hr {
   height: 44px;
   padding: 5px;
   background-clip: content-box;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.4); */
   color: rgba(255, 255, 255, 0.5);
   transition: color 0.2s cubic-bezier(0.44, 0.13, 0.48, 0.87), background-color 0.2s cubic-bezier(0.44, 0.13, 0.48, 0.87);
   display: none; }
@@ -5143,7 +5143,9 @@ hr {
     .slideshow__controls:hover .slideshow__arrows,
     .slideshow__controls:focus .slideshow__arrows,
     .slideshow__controls--hover .slideshow__arrows {
-      background-color: rgba(0, 0, 0, 0.75); } }
+      /* background-color: rgba(0, 0, 0, 0.75);  */
+    } 
+    }
   .slideshow__arrows .slideshow__arrow {
     height: 44px;
     width: 44px;
